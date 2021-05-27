@@ -1,4 +1,22 @@
 export default {
+  classes: {
+    search: {
+      table: 'min-w-full divide-y divide-gray-200',
+      tableHead: 'bg-gray-50',
+      tableHeadCell: 'px-6 py-3 text-left text-xs font-medium text-gray-500 tracking-wider',
+      tableBodyCell: 'px-6 py-4 whitespace-nowrap',
+
+      pagination: {
+        ul: '',
+        li: '',
+        page: '',
+        active: '',
+        first: '',
+        last: '',
+        button: '',
+      },
+    },
+  },
   formulate: {
     classes: {
       outer: 'mb-4',
