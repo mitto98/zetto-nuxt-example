@@ -7,7 +7,7 @@
     <version>1.0-SNAPSHOT</version>
     <properties>
         <portofino.version>5.2.1</portofino.version>
-        <spring.boot.version>2.3.0.RELEASE</spring.boot.version>
+        <spring.boot.version>2.5.1</spring.boot.version>
         <portofino.application.directory>${serverInfo:realPath}/WEB-INF</portofino.application.directory>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
