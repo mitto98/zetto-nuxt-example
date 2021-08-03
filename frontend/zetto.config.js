@@ -3,17 +3,20 @@ export default {
     search: {
       table: 'min-w-full divide-y divide-gray-200',
       tableHead: 'bg-gray-50',
-      tableHeadCell: 'px-6 py-3 text-left text-xs font-medium text-gray-500 tracking-wider',
+      tableHeadCell:
+        'px-6 py-3 text-left text-xs font-medium text-gray-500 tracking-wider',
       tableBodyCell: 'px-6 py-4 whitespace-nowrap',
 
       pagination: {
-        ul: '',
+        nav: 'block',
+        ul: 'flex pl-0 rounded list-none flex-wrap',
         li: '',
         page: '',
         active: '',
         first: '',
         last: '',
-        button: '',
+        button:
+          'first:ml-0 text-xs font-semibold flex w-8 h-8 mx-1 p-0 rounded-full items-center justify-center leading-tight relative border border-solid border-gray-800 text-white bg-gray-800',
       },
     },
   },

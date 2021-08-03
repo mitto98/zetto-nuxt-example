@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration database="zetto" query="from classi where cod_direzione_territoriale = %{#istituto.cod_direz_terr} and cod_scuola = %{#istituto.cod_scuola} order by id desc" name="classi" variable="classe" largeResultSet="false" rowsPerPage="10" useLocalOrder="true">
+    <properties>
+        <property enabled="true" name="id" insertable="false" updatable="false" inSummary="false" searchable="false">
+            <annotations/>
+        </property>
+        <virtual-property expression="classe+sezione" type="java.lang.String" language="OGNL" enabled="true" name="classe_sezione" label="classe" insertable="false" updatable="false" inSummary="true" searchable="false">
+            <annotations/>
+        </virtual-property>
+        <property enabled="true" name="classe" insertable="true" updatable="true" inSummary="false" searchable="true">
+            <annotations/>
+        </property>
+        <property enabled="true" name="cod_direzione_territoriale" insertable="false" updatable="false" inSummary="false" searchable="true">
+            <annotations/>
+        </property>
+        <property enabled="true" name="cod_scuola" insertable="false" updatable="false" inSummary="false" searchable="true">
+            <annotations/>
+        </property>
+        <property enabled="true" name="sezione" insertable="true" updatable="true" inSummary="false" searchable="true">
+            <annotations/>
+        </property>
+        <property enabled="true" name="anno_sc_id" label="anno scolastico" insertable="true" updatable="true" inSummary="true" searchable="true">
+            <annotations/>
+        </property>
+    </properties>
+    <selectionProviders>
+        <selectionProvider enabled="true" fk="fk_classe_as" displayMode="DROPDOWN" searchDisplayMode="DROPDOWN"/>
+    </selectionProviders>
+</configuration>

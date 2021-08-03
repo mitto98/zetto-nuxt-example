@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4">
+  <div>
     <div class="flex mb-5">
       <h1 class="text-3xl font-bold leading-7 text-gray-900">Istituti</h1>
       <n-link
@@ -20,7 +20,14 @@
         <template #cell(actions)="{ item }">
           <div class="flex item-center justify-center">
             <div
-              class="w-4 mr-2 transform hover:text-blue-800 hover:scale-110 cursor-pointer"
+              class="
+                w-4
+                mr-2
+                transform
+                hover:text-blue-800
+                hover:scale-110
+                cursor-pointer
+              "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +44,14 @@
               </svg>
             </div>
             <div
-              class="w-4 mr-2 transform hover:text-blue-800 hover:scale-110 cursor-pointer"
+              class="
+                w-4
+                mr-2
+                transform
+                hover:text-blue-800
+                hover:scale-110
+                cursor-pointer
+              "
               @click="deleting = item.key"
             >
               <svg

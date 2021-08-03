@@ -20,12 +20,7 @@ export default {
 
   components: true,
 
-  buildModules: [
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/stylelint-module',
-    '@nuxtjs/tailwindcss',
-    'zetto/nuxt',
-  ],
+  buildModules: ['@nuxtjs/tailwindcss', 'zetto/nuxt'],
 
   modules: ['@nuxtjs/axios'],
 

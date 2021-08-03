@@ -1,46 +1,16 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: '/src/main/frontend'
-  schedule:
-    interval: daily
-    time: '00:00'
-  open-pull-requests-limit: 10
-  reviewers:
-    - mitto98
-  assignees:
-    - mitto98
-  commit-message:
-    prefix: fix
-    prefix-development: chore
-    include: scope
+  - package-ecosystem: npm
+    directory: '/frontend'
+    schedule:
+      interval: weekly
 
-- package-ecosystem: "maven"
-  directory: "/"
-  schedule:
-    interval: daily
-    time: '00:00'
-  open-pull-requests-limit: 10
-  reviewers:
-    - mitto98
-  assignees:
-    - mitto98
-  commit-message:
-    prefix: "fix"
-    prefix-development: chore
-    include: scope
+  - package-ecosystem: maven
+    directory: '/portofino'
+    schedule:
+      interval: weekly
 
-- package-ecosystem: github-actions
-  directory: '/'
-  schedule:
-    interval: daily
-    time: '00:00'
-  open-pull-requests-limit: 10
-  reviewers:
-    - mitto98
-  assignees:
-    - mitto98
-  commit-message:
-    prefix: fix
-    prefix-development: chore
-    include: scope
+  - package-ecosystem: github-actions
+    directory: '/'
+    schedule:
+      interval: weekly
