@@ -1,7 +1,7 @@
 export default {
   ssr: false,
 
-  target: 'static',
+  target: 'server',
 
   head: {
     title: 'zetto-nuxt-example',
@@ -16,11 +16,13 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
+  css: ['bootstrap/scss/bootstrap.scss'],
+
   plugins: ['@/plugins/portofino.js'],
 
   components: true,
 
-  buildModules: ['@nuxtjs/tailwindcss', 'zetto/nuxt'],
+  buildModules: ['zetto/nuxt'],
 
   modules: ['@nuxtjs/axios'],
 

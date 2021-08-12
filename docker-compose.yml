@@ -1,4 +1,4 @@
-version: "3.5"
+version: '3.5'
 
 services:
   database:
@@ -9,23 +9,24 @@ services:
     ports:
       - 5432:5432
     environment:
-      POSTGRES_DB: "zetto"
-      POSTGRES_USER: "zetto"
-      POSTGRES_PASSWORD: "supersecret"
+      POSTGRES_DB: 'zetto'
+      POSTGRES_USER: 'zetto'
+      POSTGRES_PASSWORD: 'supersecret'
       PGDATA: /data/postgres
 
   portofino:
     build: ./portofino/
     ports:
-      - "8081:8080"
+      - '8080:8080'
     environment:
-      DATABASE_ADDRESS: "database"
-      DATABASE_PORT: "5432"
-      DATABASE_NAME: "zetto"
-      DATABASE_USERNAME: "zetto"
-      DATABASE_PASSWORD: "supersecret"
+      JWT_SECRET: 'ciaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociaociao'
+      DATABASE_ADDRESS: 'database'
+      DATABASE_PORT: '5432'
+      DATABASE_NAME: 'zetto'
+      DATABASE_USERNAME: 'zetto'
+      DATABASE_PASSWORD: 'supersecret'
       PGDATA: /data/postgres
-      TZ: "Europe/Rome"
+      TZ: 'Europe/Rome'
 
 volumes:
   db_data:
