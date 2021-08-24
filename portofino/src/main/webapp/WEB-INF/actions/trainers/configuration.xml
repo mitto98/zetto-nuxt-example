@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration database="zetto" query="from trainers" name="" searchTitle="Allenatori" createTitle="Crea allenatore" readTitle="Allenatore" editTitle="Modifica allenatore" variable="trainer" largeResultSet="false" rowsPerPage="10" useLocalOrder="false">
+    <properties>
+        <property enabled="true" name="id" insertable="false" updatable="false" inSummary="false" searchable="false">
+            <annotations/>
+        </property>
+        <property enabled="true" name="username" label="Username" insertable="true" updatable="false" inSummary="true" searchable="true">
+            <annotations/>
+        </property>
+        <property enabled="true" name="first_name" label="Nome" insertable="true" updatable="true" inSummary="true" searchable="false">
+            <annotations/>
+        </property>
+        <property enabled="true" name="last_name" label="Cognome" insertable="true" updatable="true" inSummary="true" searchable="false">
+            <annotations/>
+        </property>
+        <property enabled="true" name="birth_date" label="Data di nascita" insertable="true" updatable="true" inSummary="true" searchable="true">
+            <annotations/>
+        </property>
+        <property enabled="true" name="gender" label="Genere" insertable="true" updatable="true" inSummary="false" searchable="true">
+            <annotations/>
+        </property>
+        <property enabled="true" name="birth_country" label="Regione" insertable="true" updatable="true" inSummary="true" searchable="true">
+            <annotations/>
+        </property>
+    </properties>
+    <selectionProviders>
+        <selectionProvider enabled="true" fk="trainers_birth_country_fkey" displayMode="AUTOCOMPLETE" searchDisplayMode="AUTOCOMPLETE"/>
+    </selectionProviders>
+</configuration>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<table tableName="trainers">
+    <annotations/>
+    <columns>
+        <column columnName="id" columnType="serial" length="10" jdbcType="4" autoincrement="true" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="username" columnType="varchar" length="255" jdbcType="12" autoincrement="false" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="first_name" columnType="varchar" length="255" jdbcType="12" autoincrement="false" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="last_name" columnType="varchar" length="255" jdbcType="12" autoincrement="false" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="birth_date" columnType="timestamp" jdbcType="93" autoincrement="false" nullable="false">
+            <annotations>
+                <annotation type="com.manydesigns.elements.annotations.DateFormat">
+                    <property name="value" value="dd/MM/YYYY"/>
+                </annotation>
+            </annotations>
+        </column>
+        <column columnName="gender" columnType="bpchar" length="1" jdbcType="1" autoincrement="false" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="birth_country" columnType="int4" length="10" jdbcType="4" autoincrement="false" nullable="false">
+            <annotations/>
+        </column>
+    </columns>
+    <foreignKeys>
+        <foreignKey toTable="regions" toSchema="public" onUpdate="importedKeyNoAction" onDelete="importedKeyNoAction" name="trainers_birth_country_fkey" toDatabase="zetto" hql="from regions">
+            <references>
+                <reference fromColumn="birth_country" toColumn="id"/>
+            </references>
+        </foreignKey>
+    </foreignKeys>
+    <primaryKey primaryKeyName="trainers_pkey">
+        <column columnName="id"/>
+    </primaryKey>
+    <selectionProviders/>
+</table>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<action>
+    <additional-child path="res:com/manydesigns/portofino/upstairs/actions" segment="portofino-upstairs"/>
+    <permissions>
+        <group level="VIEW" name="all"/>
+    </permissions>
+</action>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<table tableName="pokemon_trainer">
+    <annotations/>
+    <columns>
+        <column columnName="pokemon" columnType="int4" length="10" jdbcType="4" autoincrement="false" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="trainer" columnType="int4" length="10" jdbcType="4" autoincrement="false" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="gender" columnType="bpchar" length="1" jdbcType="1" autoincrement="false" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="level" columnType="int4" length="10" jdbcType="4" autoincrement="false" nullable="false">
+            <annotations/>
+        </column>
+        <column columnName="catch_date" columnType="timestamp" jdbcType="93" autoincrement="false" nullable="true">
+            <annotations>
+                <annotation type="com.manydesigns.elements.annotations.DateFormat">
+                    <property name="value" value="dd/MM/YYYY"/>
+                </annotation>
+            </annotations>
+        </column>
+    </columns>
+    <foreignKeys>
+        <foreignKey toTable="trainers" toSchema="public" onUpdate="importedKeyNoAction" onDelete="importedKeyNoAction" name="pokemon_trainer_trainer_fkey" toDatabase="zetto" hql="from trainers">
+            <references>
+                <reference fromColumn="trainer" toColumn="id"/>
+            </references>
+        </foreignKey>
+        <foreignKey toTable="pokemons" toSchema="public" onUpdate="importedKeyNoAction" onDelete="importedKeyNoAction" name="pokemon_trainer_pokemon_fkey" toDatabase="zetto" hql="from pokemons">
+            <references>
+                <reference fromColumn="pokemon" toColumn="id"/>
+            </references>
+        </foreignKey>
+    </foreignKeys>
+    <selectionProviders/>
+</table>
