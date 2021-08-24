@@ -111,6 +111,7 @@
     </dependencies>
 
     <build>
+        <finalName>ROOT</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -128,7 +129,6 @@
                 <version>3.2.3</version>
                 <configuration>
                     <filteringDeploymentDescriptors>true</filteringDeploymentDescriptors>
-                    <warName>zetto-portofino-be</warName>
                     <webResources>
                         <resource>
                             <directory>src/main/webapp/</directory>
