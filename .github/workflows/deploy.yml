@@ -78,6 +78,8 @@ jobs:
           context: ./frontend/
           tags: mitto98/tesi-frontend:latest
           push: true
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache
 
   docker-be:
     name: Build and push backend docker image
@@ -108,3 +110,5 @@ jobs:
           context: ./portofino/
           tags: mitto98/tesi-portofino:latest
           push: true
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache
