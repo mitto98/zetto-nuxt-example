@@ -50,7 +50,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: portofino
-          path: target/ROOT.war
+          path: ./portofino/target/ROOT.war
 
   docker-fe:
     name: Build and push frontend docker image
