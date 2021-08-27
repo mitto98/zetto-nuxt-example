@@ -5,7 +5,7 @@ services:
     image: postgres:13-alpine
     volumes:
       - db_data:/data/postgres
-      - ./env/dev/portofino/db-init:/docker-entrypoint-initdb.d
+      - ./env/db-init:/docker-entrypoint-initdb.d
     ports:
       - 5432:5432
     environment:
