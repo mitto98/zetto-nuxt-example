@@ -26,6 +26,10 @@ export default {
 
   modules: ['@nuxtjs/axios'],
 
+  axios: {
+    baseURL: process.env.API_URL || '//tesi.codemoka.io/api',
+  },
+
   publicRuntimeConfig: {
     apiUrl: process.env.API_URL || '//tesi.codemoka.io/api',
   },
