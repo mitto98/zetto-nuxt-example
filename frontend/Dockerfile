@@ -8,7 +8,7 @@ EXPOSE 3000
 
 COPY package*.json .
 
-RUN npm ci && 
+RUN npm ci
 
 RUN npm run build
 
