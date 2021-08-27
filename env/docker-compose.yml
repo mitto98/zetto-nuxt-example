@@ -6,6 +6,8 @@ services:
     labels:
       - 'traefik.enable=true'
       - 'traefik.http.routers.tesi-fe.rule=Host(`tesi.codemoka.io`)'
+    networks:
+      - default
 
   portofino:
     image: mitto98/tesi-portofino
@@ -23,6 +25,9 @@ services:
     labels:
       - 'traefik.enable=true'
       - 'traefik.http.routers.tesi-api.rule=Host(`tesi.codemoka.io`) && PathPrefix(`/api`)'
+    networks:
+      - default
+      - project
 
   database:
     image: postgres:13-alpine
@@ -36,6 +41,15 @@ services:
     volumes:
       - db_data:/data/postgres
       - ./db-init:/docker-entrypoint-initdb.d
+    networks:
+      - project
 
 volumes:
   db_data:
+
+networks:
+  default:
+    external:
+      name: gateway
+  project:
+    internal: true
