@@ -1,4 +1,4 @@
-FROM node:lts-alpine
+FROM node:16-alpine
 
 ENV NUXT_HOST=0.0.0.0
 
@@ -12,4 +12,4 @@ RUN npm install --production
 
 COPY . .
 
-CMD [ "npm", "start" ]
+CMD [ "npm", "run", "start" ]
