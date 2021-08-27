@@ -25,9 +25,9 @@ jobs:
         with:
           name: frontend
           path: |
-            ./dist
-            ./.nuxt
-            ./package*.json
+            ./frontend/dist
+            ./frontend/.nuxt
+            ./frontend/package*.json
 
   build-be:
     name: Build backend
