@@ -5,31 +5,6 @@ on:
     branches: [main]
 
 jobs:
-  build-fe:
-    name: Build frontend
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: frontend
-    steps:
-      - uses: actions/checkout@v2.3.4
-      - name: Setup node.js
-        uses: actions/setup-node@v2.1.5
-        with:
-          node-version: '16'
-      - name: Install dependencies
-        run: npm ci
-      - name: Build project
-        run: npm run build
-      - uses: actions/upload-artifact@v2
-        with:
-          name: frontend
-          path: |
-            ./frontend/dist
-            ./frontend/.nuxt
-            ./frontend/package*.json
-            ./frontend/Dockerfile
-
   build-be:
     name: Build backend
     runs-on: ubuntu-latest
@@ -59,7 +34,6 @@ jobs:
   docker-fe:
     name: Build and push frontend docker image
     runs-on: ubuntu-latest
-    needs: build-fe
     steps:
       - uses: actions/download-artifact@v2
         with:
