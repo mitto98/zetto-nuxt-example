@@ -16,15 +16,13 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
-  css: ['bootstrap/scss/bootstrap.scss'],
-
-  plugins: ['@/plugins/portofino.js'],
+  plugins: ['@/plugins/portofino.js', '@/plugins/vue-plugins.js'],
 
   components: true,
 
   buildModules: ['zetto/nuxt'],
 
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', 'bootstrap-vue/nuxt'],
 
   axios: {
     baseURL: process.env.API_URL || '//tesi.codemoka.io/api',

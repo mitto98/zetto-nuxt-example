@@ -1,12 +1,11 @@
 <template>
-  <div class="p-4">
-    <div v-if="!$fetchState.pending">
-      <crud-update
-        :entity="$route.params.id"
-        :action="action"
-        submit-label="Salva le modifiche"
-      />
-    </div>
+  <div v-if="!$fetchState.pending" class="p-4">
+    <crud-update
+      :action="action"
+      :entity="$route.params.id"
+      :title="true"
+      submit-label="Salva le modifiche"
+    />
   </div>
 </template>
 
