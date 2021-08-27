@@ -1,15 +1,15 @@
 FROM node:lts-alpine
 
-ENV APP_ROOT /src
 ENV NUXT_HOST=0.0.0.0
 
-RUN mkdir -p ${APP_ROOT}
-WORKDIR ${APP_ROOT}
+WORKDIR /app
 
-COPY * ${APP_ROOT}
+EXPOSE 3000
+
+COPY package*.json .
 
 RUN npm install --production
 
-EXPOSE 3000
+COPY * .
 
 CMD [ "npm", "start" ]
