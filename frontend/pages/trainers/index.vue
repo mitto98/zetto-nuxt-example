@@ -91,7 +91,6 @@ export default {
       this.loading = true;
       try {
         await this.action.delete(this.deleting);
-        console.log('tutto a bagasce');
       } catch (e) {
         this.error = e.response?.data?.message || "C'è stati un errore 🤭";
       }

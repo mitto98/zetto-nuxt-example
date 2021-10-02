@@ -27,7 +27,7 @@ class Security extends AbstractPortofinoRealm {
         String userName = usernamePasswordToken.username;
         String password = new String(usernamePasswordToken.password);
         if (ADMIN_LOGIN.equals(userName) && ADMIN_PASSWORD.equals(password) ||
-            GUEST_LOGIN.equals(userName) && GUEST_PASSWORD.equals(password)) {
+                GUEST_LOGIN.equals(userName) && GUEST_PASSWORD.equals(password)) {
             SimpleAuthenticationInfo info =
                     new SimpleAuthenticationInfo(userName, password.toCharArray(), getName());
             return info;
@@ -84,7 +84,7 @@ class Security extends AbstractPortofinoRealm {
     public Serializable getUserById(String username) {
         username
     }
-    
+
     @Override
     public String encryptPassword(String password) {
         password

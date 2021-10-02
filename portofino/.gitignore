@@ -1,2 +1,6 @@
+.idea/
 target/
 src/main/webapp/WEB-INF/portofino-local.properties
+.classpath
+.factorypath
+.project

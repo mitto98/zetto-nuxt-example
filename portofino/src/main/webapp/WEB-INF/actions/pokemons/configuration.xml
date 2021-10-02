@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration database="zetto" query="from pokemons" searchTitle="Pokemon" largeResultSet="false" rowsPerPage="10" useLocalOrder="false">
+    <properties>
+        <property enabled="false" name="id" insertable="false" updatable="false" inSummary="false" searchable="false">
+            <annotations/>
+        </property>
+        <property enabled="true" name="name" label="Nome" insertable="false" updatable="false" inSummary="true" searchable="true">
+            <annotations/>
+        </property>
+        <property enabled="true" name="primary_type" label="Tipo" insertable="false" updatable="false" inSummary="true" searchable="true">
+            <annotations/>
+        </property>
+        <property enabled="true" name="secondary_type" label="Tipo secondario" insertable="false" updatable="false" inSummary="true" searchable="true">
+            <annotations/>
+        </property>
+    </properties>
+    <selectionProviders/>
+</configuration>
