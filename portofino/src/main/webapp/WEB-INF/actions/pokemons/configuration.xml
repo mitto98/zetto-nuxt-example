@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<configuration database="zetto" query="from pokemons" searchTitle="Pokemon" largeResultSet="false" rowsPerPage="10" useLocalOrder="false">
+<configuration database="zetto" query="from pokemons" searchTitle="Pokemon" createTitle="Crea Pokemon" readTitle="Pokemon" editTitle="Modifica Pokemon" largeResultSet="false" rowsPerPage="10" useLocalOrder="false">
     <properties>
         <property enabled="false" name="id" insertable="false" updatable="false" inSummary="false" searchable="false">
             <annotations/>

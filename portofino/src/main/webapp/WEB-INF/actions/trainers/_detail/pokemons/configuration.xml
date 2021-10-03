@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration database="zetto" query="select pt&#10;from pokemon_trainer as pt&#10;join pt.pokemon_trainer_pokemon_fkey&#10;" largeResultSet="false" rowsPerPage="10" useLocalOrder="false">
+    <properties>
+        <property enabled="true" name="pokemon" insertable="true" updatable="false" inSummary="true" searchable="true">
+            <annotations/>
+        </property>
+        <property enabled="false" name="trainer" insertable="false" updatable="false" inSummary="false" searchable="false">
+            <annotations/>
+        </property>
+        <property enabled="true" name="gender" insertable="true" updatable="false" inSummary="true" searchable="true">
+            <annotations/>
+        </property>
+        <property enabled="true" name="level" insertable="true" updatable="false" inSummary="true" searchable="true">
+            <annotations/>
+        </property>
+        <property enabled="true" name="catch_date" insertable="true" updatable="false" inSummary="true" searchable="false">
+            <annotations/>
+        </property>
+        <property enabled="false" name="id" insertable="false" updatable="false" inSummary="false" searchable="false">
+            <annotations/>
+        </property>
+    </properties>
+    <selectionProviders>
+        <selectionProvider enabled="true" fk="pokemon_trainer_pokemon_fkey" displayMode="DROPDOWN" searchDisplayMode="AUTOCOMPLETE"/>
+        <selectionProvider enabled="true" fk="pokemon_trainer_trainer_fkey" displayMode="DROPDOWN" searchDisplayMode="DROPDOWN"/>
+    </selectionProviders>
+</configuration>

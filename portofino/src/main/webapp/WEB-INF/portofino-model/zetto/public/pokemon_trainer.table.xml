@@ -21,14 +21,20 @@
                 </annotation>
             </annotations>
         </column>
+        <column columnName="id" columnType="serial" length="10" jdbcType="4" autoincrement="true" nullable="false">
+            <annotations/>
+        </column>
     </columns>
+    <primaryKey primaryKeyName="pokemon_trainer_pkey">
+        <column columnName="id"/>
+    </primaryKey>
     <foreignKeys>
-        <foreignKey toTable="trainers" toSchema="public" onUpdate="importedKeyNoAction" onDelete="importedKeyNoAction" name="pokemon_trainer_trainer_fkey" toDatabase="zetto" hql="from trainers">
+        <foreignKey toTable="trainers" toSchema="public" onUpdate="importedKeyNoAction" onDelete="importedKeyCascade" name="pokemon_trainer_trainer_fkey" toDatabase="zetto" hql="from trainers">
             <references>
                 <reference fromColumn="trainer" toColumn="id"/>
             </references>
         </foreignKey>
-        <foreignKey toTable="pokemons" toSchema="public" onUpdate="importedKeyNoAction" onDelete="importedKeyNoAction" name="pokemon_trainer_pokemon_fkey" toDatabase="zetto" hql="from pokemons">
+        <foreignKey toTable="pokemons" toSchema="public" onUpdate="importedKeyNoAction" onDelete="importedKeyCascade" name="pokemon_trainer_pokemon_fkey" toDatabase="zetto" hql="from pokemons">
             <references>
                 <reference fromColumn="pokemon" toColumn="id"/>
             </references>

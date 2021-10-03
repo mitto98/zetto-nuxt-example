@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<table tableName="pokemons">
+<table tableName="pokemons" shortName="%{name}">
     <annotations/>
     <columns>
         <column columnName="id" columnType="serial" length="10" jdbcType="4" autoincrement="true" nullable="false">
