@@ -15,10 +15,10 @@
     "nuxt": "^2.15.6",
     "sass": "1.32",
     "sass-loader": "~10.1.0",
-    "zetto": "^0.1.6"
+    "zetto": "^0.1.9"
   },
   "devDependencies": {
     "prettier": "^2.3.0",
-    "webpack": "~4.46.0"
+    "webpack": "~5.58.1"
   }
 }
