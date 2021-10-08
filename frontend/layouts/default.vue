@@ -26,6 +26,11 @@
                 >Allenatori</n-link
               >
             </li>
+            <li class="nav-item">
+              <n-link class="nav-link" active-class="active" to="/pokemons"
+                >Pokemon</n-link
+              >
+            </li>
           </ul>
         </div>
       </div>

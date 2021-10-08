@@ -6,7 +6,7 @@ export default {
   head: {
     title: 'zetto-nuxt-example',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'it',
     },
     meta: [
       { charset: 'utf-8' },
@@ -15,6 +15,8 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
+
+  css: ['~/assets/main.scss'],
 
   plugins: ['@/plugins/portofino.js', '@/plugins/vue-plugins.js'],
 
@@ -30,5 +32,10 @@ export default {
 
   publicRuntimeConfig: {
     apiUrl: process.env.API_URL || '//tesi.codemoka.io/api',
+  },
+
+  bootstrapVue: {
+    bootstrapCSS: false,
+    bootstrapVueCSS: false,
   },
 };
