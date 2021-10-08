@@ -11,11 +11,11 @@
     "@manydesigns/portofino": "^1.7.1",
     "@nuxtjs/axios": "^5.13.4",
     "bootstrap-vue": "^2.21.2",
-    "core-js": "^3.12.1",
+    "core-js": "^3.18.2",
     "nuxt": "^2.15.6",
     "sass": "1.32",
     "sass-loader": "~10.1.0",
-    "zetto": "^0.1.6"
+    "zetto": "^0.1.9"
   },
   "devDependencies": {
     "prettier": "^2.3.0",
