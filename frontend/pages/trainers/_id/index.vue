@@ -5,7 +5,7 @@
         <crud-read :entity="$route.params.id" :action="action" />
       </div>
       <div class="col-md-8">
-        <crud-search :action="trainerPoke">
+        <crud-search :action="trainerPoke" :fields="{ id: { display: false } }">
           <template #cell(pokemon)="{ item }">
             <n-link :to="`/pokemons/${item.key}`">
               {{ item.getDisplayValue('pokemon') }}
