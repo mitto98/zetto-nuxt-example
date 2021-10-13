@@ -2,10 +2,14 @@
   <div class="container-fluid">
     <div v-if="!$fetchState.pending" class="row">
       <div class="col-md-4">
-        <crud-read :entity="$route.params.id" :action="action" />
+        <crud-read
+          :entity="$route.params.id"
+          :action="action"
+          :fields="{ id: { display: false } }"
+        />
       </div>
       <div class="col-md-8">
-        <crud-search :action="trainerPoke" :fields="{ id: { display: false } }">
+        <crud-search :action="trainerPoke">
           <template #cell(pokemon)="{ item }">
             <n-link :to="`/pokemons/${item.key}`">
               {{ item.getDisplayValue('pokemon') }}
