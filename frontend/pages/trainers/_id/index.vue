@@ -9,6 +9,7 @@
         />
       </div>
       <div class="col-md-8">
+        <h2>Pokemon posseduti</h2>
         <crud-search :action="trainerPoke">
           <template #cell(pokemon)="{ item }">
             <n-link :to="`/pokemons/${item.key}`">
