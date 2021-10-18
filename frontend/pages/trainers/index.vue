@@ -22,8 +22,14 @@
       :buttons="tableButtons"
     >
       <template #cell(username)="{ item, value }">
-        <n-link :to="`/trainers/${item.key}`">
-          {{ value }}
+        <n-link :to="`/trainers/${item.key}`" custom v-slot="{ navigate }">
+          <button
+            class="btn btn-link p-0"
+            :href="`/trainers/${item.key}`"
+            @click.prevent="navigate"
+          >
+            {{ value }}
+          </button>
         </n-link>
       </template>
       <template #cell(actions)="{ item }">
