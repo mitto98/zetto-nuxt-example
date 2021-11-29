@@ -11,7 +11,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <portofino.version>5.3.0</portofino.version>
-        <spring.boot.version>2.5.3</spring.boot.version>
+        <spring.boot.version>2.6.1</spring.boot.version>
         <!--suppress UnresolvedMavenProperty -->
         <portofino.application.directory>${serverInfo:realPath}/WEB-INF</portofino.application.directory>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
