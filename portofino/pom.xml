@@ -16,7 +16,7 @@
         <portofino.application.directory>${serverInfo:realPath}/WEB-INF</portofino.application.directory>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdbc-postgresql.version>42.2.24.jre7</jdbc-postgresql.version>
-        <groovy.version>3.0.8</groovy.version>
+        <groovy.version>3.0.9</groovy.version>
     </properties>
     <dependencyManagement>
         <dependencies>
