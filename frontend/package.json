@@ -18,7 +18,7 @@
     "zetto": "^0.3.0"
   },
   "devDependencies": {
-    "prettier": "^2.3.0",
+    "prettier": "^2.5.1",
     "webpack": "~4.46.0"
   }
 }
